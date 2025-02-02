@@ -1,0 +1,499 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Bungee', cursive;
+}
+
+/* Hero Section */
+.hero-section {
+    background: url('./kali.webp') no-repeat center center/cover;
+    /* Replace with your background image */
+    background-size: cover;
+    height: 100vh;
+    /* Full page height */
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero-section h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    /* Modern font */
+
+    /* Gradient for glossy dark effect */
+    background: linear-gradient(135deg, #0a0a0a, #0400ff, #0a0a0a);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.hero-section p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    font-weight: 300;
+    line-height: 1.8;
+    font-family: 'Poppins', sans-serif;
+    /* Elegant font */
+    color: #000000;
+}
+
+/* Call-to-Action Button Styling */
+.hero-section .btn {
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: none;
+    text-decoration: none;
+    border-radius: 50px;
+    background: linear-gradient(90deg, #000000, #00FF88);
+    /* Green and black gradient */
+    color: #ffffff;
+    /* White text */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero-section .btn:hover {
+    background: linear-gradient(90deg, #00FF88, #000000);
+    /* Reverse gradient effect on hover */
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    opacity: 0.9;
+    /* Slightly dim effect */
+}
+
+.hero-section .btn:active {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    /* Full opacity on click */
+}
+
+
+/* Adding Subtle Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animation to text and button */
+.hero-section h1,
+.hero-section p,
+.hero-section .btn {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.hero-section h1 {
+    animation-delay: 0.3s;
+}
+
+.hero-section p {
+    animation-delay: 0.5s;
+}
+
+.hero-section .btn {
+    animation-delay: 0.7s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 3rem;
+    }
+
+    .hero-section p {
+        font-size: 1.2rem;
+    }
+
+    .hero-section .btn {
+        padding: 12px 30px;
+        font-size: 1.1rem;
+    }
+
+    .product-card {
+        margin-bottom: 20px;
+    }
+
+    .product-card+.product-card {
+        margin-top: 20px;
+    }
+}
+
+.products img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.products i {
+    font-size: 3rem;
+    color: #007bff;
+}
+
+footer {
+    background: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+footer a {
+    color: #ffc107;
+    text-decoration: none;
+}
+
+.address-line {
+    display: block;
+    margin-bottom: 5px;
+}
+
+section {
+    padding: 40px 0;
+}
+
+
+.btn-warning {
+    background-color: #ff9800;
+    border: none;
+}
+
+.btn-warning:hover {
+    background-color: #e68900;
+}
+
+.product-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.product-card .product-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.product-card:hover .product-info {
+    opacity: 1;
+}
+
+.product-card:hover img {
+    transform: scale(1.1);
+}
+
+iframe {
+    border: 0;
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+}
+
+.product-details {
+    padding: 0;
+}
+
+.product-details h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.product-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.product-carousel img {
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+    margin-right: 20px;
+    scroll-snap-align: center;
+    border-radius: 10px;
+}
+
+.contact-info {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: #007bff;
+    font-size: 1.5rem;
+}
+
+.contact-info a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #0056b3;
+}
+
+.contact-info .phone-numbers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-info .phone-numbers p {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.contact-info img {
+    width: 200px;
+    height: 255px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Navbar Styles */
+.navbar {
+    background-color: #111;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    /* Ensure no border around the navbar */
+}
+
+.navbar.scrolled {
+    background-color: #222;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Navbar Brand */
+.navbar-brand {
+    font-size: 1.0rem;
+    font-weight: bold;
+    color: #ffffff !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+    color: #fff !important;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-left: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #00ff88 !important;
+}
+
+/* Navbar Toggler */
+.navbar-toggler {
+    border: none;
+    /* Remove the default border */
+    margin-left: auto;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    width: 30px;
+    /* Icon size */
+    height: 30px;
+    /* Icon size */
+    background-size: contain;
+    /* Ensure the icon fits the container */
+}
+
+/* Remove the default focus outline and border when toggler is focused */
+.navbar-toggler:focus {
+    outline: none;
+    border: none;
+}
+
+/* Scrolled Navbar Styles (for when the page is scrolled) */
+.navbar.scrolled {
+    background-color: #222;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar-brand {
+        flex-grow: 1;
+        /* Allow brand to take more space */
+    }
+
+    .navbar-toggler {
+        margin-left: 0;
+        position: absolute;
+        right: 1rem;
+        top: 0.8rem;
+        /* Position the toggler at the top-right */
+    }
+
+    .navbar-toggler-icon {
+        width: 25px;
+        /* Smaller icon on smaller screens */
+        height: 25px;
+    }
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    text-decoration: none;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-float i {
+    font-size: 2rem;
+}
+
+/* About Section */
+#about {
+    background-color: #ffffff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+
+#about p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Cookie Consent Banner */
+.cookie-consent-banner {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+.cookie-consent-banner .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cookie-consent-banner p {
+    margin: 0;
+}
+
+.cookie-consent-banner a {
+    color: #ffc107;
+    text-decoration: underline;
+}
+
+.cookie-consent-banner .btn {
+    background-color: #ffc107;
+    border: none;
+    color: #333;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.cookie-consent-banner .btn:hover {
+    background-color: #e0a800;
+}
